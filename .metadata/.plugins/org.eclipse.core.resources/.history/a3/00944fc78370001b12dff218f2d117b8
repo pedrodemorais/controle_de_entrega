@@ -1,0 +1,39 @@
+package view;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) throws ParseException {
+		Locale.setDefault(Locale.US);
+		Scanner input = new Scanner(System.in);
+		
+		SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
+		
+		Date dateExit;
+		String dateExit1;
+		String dateArrival;
+		String placaDoCarro;
+		int numCarro;
+		double kmInicial;
+		double kmFinal;
+		Integer numOfOrder;
+		Double valueOfOrder;
+		String nameSellerOrder; 
+		String nameClientOrder;
+		
+		System.out.println("Data da Saída: dd/MM/yyy");
+		dateExit = sdf.parse(dateExit1 = input.nextLine());
+		
+		System.out.print("Número do Carro: ");
+		numCarro = input.nextInt();
+		
+		input.close();
+
+	}
+
+}

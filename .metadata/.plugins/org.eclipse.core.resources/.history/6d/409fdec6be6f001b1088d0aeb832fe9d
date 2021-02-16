@@ -1,0 +1,22 @@
+package view;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Calendar {
+
+	public static void main(String[] args) throws ParseException {
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		String date;
+		Date x;
+		date="23/11/1984";
+		
+		x=sdf.parse(date);
+		x=sdf.parse(date);
+		System.out.println(x);
+		
+
+	}
+
+}

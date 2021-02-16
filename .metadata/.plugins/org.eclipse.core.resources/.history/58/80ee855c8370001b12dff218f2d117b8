@@ -1,0 +1,47 @@
+package entities;
+
+public class Order {
+	private Integer numOfOrder;
+	private Double valueOfOrder;
+	private String nameSellerOrder; 
+	
+	public Order() {
+		
+	}
+	
+	public Order(Integer numOfOrder, Double valueOfOrder, String nameSellerOrder) {
+		this.numOfOrder = numOfOrder;
+		this.valueOfOrder = valueOfOrder;
+		this.nameSellerOrder = nameSellerOrder;
+		
+	}
+
+	public Integer getNumOfOrder() {
+		return numOfOrder;
+	}
+
+	public void setNumOfOrder(Integer numOfOrder) {
+		this.numOfOrder = numOfOrder;
+	}
+
+	public Double getValueOfOrder() {
+		return valueOfOrder;
+	}
+
+	public void setValueOfOrder(Double valueOfOrder) {
+		this.valueOfOrder = valueOfOrder;
+	}
+
+	public String getNameSellerOrder() {
+		return nameSellerOrder;
+	}
+
+	public void setNameSellerOrder(String nameSellerOrder) {
+		this.nameSellerOrder = nameSellerOrder;
+	}
+	
+	
+	
+	 
+
+}

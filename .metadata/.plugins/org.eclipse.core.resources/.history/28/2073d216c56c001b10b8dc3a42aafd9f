@@ -1,0 +1,21 @@
+package view;
+
+import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.util.Date;
+import java.util.TimeZone;
+
+public class SomarOuDiminuirUnidadeTempo {
+
+	public static void main(String[] args) {
+
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat sdf2 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		SimpleDateFormat sdf3 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		sdf3.setTimeZone(TimeZone.getTimeZone("GMT"));
+		Date d = Date.from(Instant.parse("1984-11-23T15:42:02Z"));
+		
+		System.out.println(sdf.format(d));
+	}
+
+}

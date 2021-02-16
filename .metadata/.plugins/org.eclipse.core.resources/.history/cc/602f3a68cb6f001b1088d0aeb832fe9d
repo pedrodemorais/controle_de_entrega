@@ -1,0 +1,6 @@
+package entitie;
+
+public class Product {
+	int nmum;
+
+}

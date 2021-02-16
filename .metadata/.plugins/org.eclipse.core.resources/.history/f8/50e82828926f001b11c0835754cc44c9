@@ -1,0 +1,20 @@
+package view;
+
+import java.text.SimpleDateFormat;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Scanner input= new Scanner(System.in);
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		
+		String birthDate;
+		
+		System.out.println("Enter your Birth date:  dd/MM/yyyy");
+		birthDate = input.nextLine();
+	}
+
+}

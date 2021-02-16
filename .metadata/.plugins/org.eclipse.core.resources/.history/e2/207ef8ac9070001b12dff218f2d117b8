@@ -1,0 +1,81 @@
+package entities;
+
+public class Order {
+	
+
+	private Integer numOfOrder;
+	private Double valueOfOrder;
+	private String nameSellerOrder; 
+	private String nameClientOrder;
+	private Distrit distrit;
+	
+	public Order() {
+		
+	}
+	
+	public Order(Integer numOfOrder, Double valueOfOrder, String nameSellerOrder, String nameClientOrder,Distrit distrit) {
+		this.numOfOrder = numOfOrder;
+		this.valueOfOrder = valueOfOrder;
+		this.nameSellerOrder = nameSellerOrder;
+		this.nameClientOrder = nameClientOrder;
+		this.distrit = distrit;
+		
+	}
+
+	public Distrit getDistrit() {
+		return distrit;
+	}
+
+	public void setDistrit(Distrit distrit) {
+		this.distrit = distrit;
+	}
+
+	public String getNameClientOrder() {
+		return nameClientOrder;
+	}
+
+	public void setNameClientOrder(String nameClientOrder) {
+		this.nameClientOrder = nameClientOrder;
+	}
+
+	public Integer getNumOfOrder() {
+		return numOfOrder;
+	}
+
+	public void setNumOfOrder(Integer numOfOrder) {
+		this.numOfOrder = numOfOrder;
+	}
+
+	public Double getValueOfOrder() {
+		return valueOfOrder;
+	}
+
+	public void setValueOfOrder(Double valueOfOrder) {
+		this.valueOfOrder = valueOfOrder;
+	}
+
+	public String getNameSellerOrder() {
+		return nameSellerOrder;
+	}
+
+	public void setNameSellerOrder(String nameSellerOrder) {
+		this.nameSellerOrder = nameSellerOrder;
+	}
+	
+	@Override
+	public String toString() {
+		return "Pedido: " 
+				+ numOfOrder 
+				+ " Valor: R$ " 
+				+ valueOfOrder 
+				+ " Vendedor: "
+				+ nameSellerOrder 
+				+ " Cliente" 
+				+ nameClientOrder 
+				+ " Bairro: " + distrit ;
+	}
+	
+	
+	 
+
+}

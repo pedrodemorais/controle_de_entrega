@@ -1,0 +1,26 @@
+package view;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
+
+public class ProgramDate {
+
+	public static void main(String[] args) throws ParseException {
+		
+		Scanner input= new Scanner(System.in);
+		
+		Date birthD;
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		String birthDate;
+		
+		System.out.println("Enter your Birth date: dd/MM/yyyy");
+		birthDate = input.nextLine();
+		birthD=sdf.parse(birthDate);
+		
+		System.out.println(birthD);
+		
+	}
+
+}

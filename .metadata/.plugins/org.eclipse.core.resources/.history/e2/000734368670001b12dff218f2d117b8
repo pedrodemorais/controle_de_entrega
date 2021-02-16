@@ -1,0 +1,67 @@
+package view;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Car;
+
+public class Program {
+
+	public static void main(String[] args) throws ParseException {
+		Locale.setDefault(Locale.US);
+		Scanner input = new Scanner(System.in);
+		
+		SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
+		
+		Date dateExit;
+		String dateExit1;
+		String dateArrival;
+		String placaDoCarro;
+		int numCarro;
+		double kmInicial;
+		double kmFinal;
+		Integer numOfOrder;
+		Double valueOfOrder;
+		String nameSellerOrder; 
+		String nameClientOrder;
+		
+		
+		//Lendo dados do Veículo
+		System.out.print("Data da Saída - dd/mm/yyyy: ");
+		dateExit = sdf.parse(dateExit1 = input.nextLine());
+		
+		System.out.print("Placa do Carro: ");
+		placaDoCarro = input.nextLine();
+		
+		System.out.print("Número do Carro: ");
+		numCarro = input.nextInt();
+		
+		System.out.print("Km Inicial: ");
+		kmInicial = input.nextDouble();
+		
+		System.out.print("Km Final: ");
+		kmFinal = input.nextDouble();
+		
+		Car car = new Car(placaDoCarro, numCarro,kmInicial ,kmFinal );
+		
+		//lendo os dados dos Pedidos a serem entregues
+		
+		System.out.println("Número do Pedido:");
+		numOfOrder =input.nextInt();
+		
+		System.out.println("Cliente: ");
+		nameClientOrder = input.nextLine();
+		
+		System.out.println("Vendedor: ");
+		nameSellerOrder = input.nextLine();
+		
+		
+		
+		input.close();
+
+	}
+
+}
