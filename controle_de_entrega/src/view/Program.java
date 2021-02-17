@@ -5,7 +5,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
-
 import entities.Car;
 import entities.DeliveryControl;
 import entities.Distrit;
@@ -24,6 +23,7 @@ public class Program {
 		String dateExit1;
 		String dateArrival1;
 		String placaDoCarro;
+		String nameMotorista;
 		
 		int numCarro;
 		double kmInicial;
@@ -59,8 +59,12 @@ public class Program {
 		
 		System.out.print("Km Final: ");
 		kmFinal = input.nextDouble();
+		input.nextLine();
+
+		System.out.print("Motorista: ");
+		nameMotorista = input.nextLine();
 		
-		Car car = new Car(placaDoCarro, numCarro,kmInicial ,kmFinal );
+		Car car = new Car(placaDoCarro, numCarro,kmInicial ,kmFinal,nameMotorista );
 		deliveryControl = new DeliveryControl(dateExit, dateExit, car);
 		
 		//lendo os dados dos Pedidos a serem entregues
@@ -86,18 +90,14 @@ public class Program {
 			System.out.print("Bairro: ");
 			bairro = input.nextLine();
 		
-
-			Order order = new Order(numOfOrder, valueOfOrder, nameSellerOrder, nameClientOrder, distrit = new Distrit(bairro));
+			Order order = new Order(numOfOrder, valueOfOrder, nameSellerOrder, nameClientOrder,  new Distrit(bairro));
 			deliveryControl.addOrder(order);
-		
-		
-		
-		
 		}
 		
 		System.out.println("----------------------- Controle de Entrega -------------------------------");
 		
-		System.out.println("KM Percorrido: "+car.totalKmPercorrido());
+		System.out.println("KM Percorrido: "+car.totalKmPercorrido()+" Carro: "+car.getNumCarro()+" Motorista: "+car.getNameMotorista());
+		System.out.print("-------------------------------------------------------------------------------");
 		deliveryControl.imprimeLista();
 		
 

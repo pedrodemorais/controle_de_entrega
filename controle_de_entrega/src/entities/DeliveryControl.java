@@ -55,7 +55,7 @@ public class DeliveryControl {
 	
 	public void imprimeLista() {
 		for(Order x: order) {
-			System.out.println(x);
+			System.out.print(x);
 			
 		}
 	}

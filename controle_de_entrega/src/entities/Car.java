@@ -5,16 +5,18 @@ public class Car {
 	private Integer numCarro;
 	private Double kmInicial;
 	private Double kmFinal;
+	private String nameMotorista;
 	
 	public Car() {
 		
 	}
 	
-	public Car(String placaDoCarro, Integer numCarro, Double kmInicial, Double kmFinal) {
+	public Car(String placaDoCarro, Integer numCarro, Double kmInicial, Double kmFinal, String nameMotorista) {
 		this.placaDoCarro = placaDoCarro;
 		this.numCarro = numCarro;
 		this.kmInicial = kmInicial;
 		this.kmFinal = kmFinal;
+		this.nameMotorista = nameMotorista;
 	}
 
 	public String getPlacaDoCarro() {
@@ -49,6 +51,16 @@ public class Car {
 		this.kmFinal = kmFinal;
 	}
 	
+	
+	
+	public String getNameMotorista() {
+		return nameMotorista;
+	}
+
+	public void setNameMotorista(String nameMotorista) {
+		this.nameMotorista = nameMotorista;
+	}
+
 	public double totalKmPercorrido() {
 		
 		return kmFinal - kmInicial;
